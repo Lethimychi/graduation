@@ -1,0 +1,287 @@
+.profile-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 100%);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.profile-container {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Instagram Card */
+.insta-card {
+  width: 380px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.insta-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+}
+
+.insta-avatar-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-300), var(--accent-red));
+  padding: 2px;
+}
+
+.insta-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.insta-user-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.insta-username {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-800);
+}
+
+.insta-badge {
+  color: var(--primary-400);
+  font-size: 0.8rem;
+}
+
+.insta-follow-btn {
+  background: var(--primary-400);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.insta-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.insta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.insta-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+
+.insta-actions-left {
+  display: flex;
+  gap: 12px;
+}
+
+.insta-action-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.insta-action-btn:hover {
+  transform: scale(1.15);
+}
+
+.insta-likes {
+  padding: 0 14px 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.insta-caption {
+  padding: 0 14px 14px;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.insta-username-sm {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.insta-hashtags {
+  color: var(--primary-400);
+  font-weight: 500;
+}
+
+/* Profile Info Card */
+.profile-info-card {
+  width: 380px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-xl);
+}
+
+.profile-info-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-info-header h2 {
+  font-size: 2rem;
+  color: var(--primary-500);
+}
+
+.profile-tagline {
+  font-size: 0.9rem;
+  color: var(--gray-400);
+  margin-top: 0.25rem;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-500);
+  font-family: var(--font-heading);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detail-icon {
+  font-size: 1.3rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-50);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.detail-label {
+  font-size: 0.7rem;
+  color: var(--gray-300);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .insta-card, .profile-info-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+/* Profile Right Column & Mini Gallery */
+.profile-right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 380px;
+}
+
+.profile-gallery-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-gallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+  flex: 1;
+}
+
+.profile-gallery-item:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.profile-gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  mix-blend-mode: darken;
+}
+
+
+
+@media (max-width: 768px) {
+  .profile-right-column {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-gallery-item img {
+    height: 120px;
+  }
+}

@@ -1,0 +1,213 @@
+.event-section {
+  background: linear-gradient(180deg, #F0F7FF 0%, #EBF5FF 50%, #FFFFFF 100%);
+  padding: 5rem 1.5rem;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow-md);
+  min-width: 80px;
+  border: 1px solid var(--primary-100);
+}
+
+.countdown-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-500);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.25rem;
+}
+
+/* Event Cards */
+.event-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.event-card {
+  flex: 1;
+  min-width: 240px;
+  max-width: 280px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-xl);
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.event-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.event-card h3 {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-400);
+  margin-bottom: 0.5rem;
+}
+
+.event-detail-main {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.event-detail-sub {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  margin-top: 0.25rem;
+}
+
+/* Personal Invite */
+.event-personal-invite {
+  max-width: 500px;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248, 250, 255, 0.9));
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--primary-100);
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.event-personal-invite::before {
+  content: '💌';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  background: var(--off-white);
+  padding: 0 8px;
+}
+
+.invite-quote {
+  font-size: 1.15rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.invite-from {
+  font-size: 0.85rem;
+  color: var(--primary-400);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Actions */
+.event-actions {
+  margin-bottom: 2.5rem;
+}
+
+/* Map */
+.event-map {
+  max-width: 700px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .countdown {
+    gap: 0.8rem;
+  }
+
+  .countdown-item {
+    min-width: 65px;
+    padding: 1rem;
+  }
+
+  .countdown-number {
+    font-size: 1.8rem;
+  }
+
+  .event-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Event Story */
+.event-story-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.event-story-item {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-story-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.event-story-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.event-story-caption {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--primary-500);
+}

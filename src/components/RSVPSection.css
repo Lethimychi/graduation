@@ -1,0 +1,279 @@
+.rsvp-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, #EBF5FF 50%, #D6EBFF 100%);
+  padding: 5rem 1.5rem;
+}
+
+/* Stats */
+.rsvp-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rsvp-stat {
+  text-align: center;
+  padding: 1.2rem 2rem;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  min-width: 140px;
+  border: 1px solid var(--gray-100);
+}
+
+.rsvp-stat-yes {
+  border-left: 4px solid #2ecc71;
+}
+
+.rsvp-stat-maybe {
+  border-left: 4px solid var(--accent-gold);
+}
+
+.rsvp-stat-total {
+  border-left: 4px solid var(--primary-300);
+}
+
+.rsvp-stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--gray-800);
+}
+
+.rsvp-stat-label {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+/* Container */
+.rsvp-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Form */
+.rsvp-form {
+  flex: 1;
+  min-width: 320px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+  position: sticky;
+  top: 2rem;
+}
+
+.rsvp-form-title {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  margin-bottom: 1.5rem;
+}
+
+.rsvp-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.rsvp-form .form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rsvp-form .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  background: var(--white);
+  transition: border-color 0.2s;
+}
+
+.rsvp-form .form-group input:focus {
+  border-color: var(--primary-300);
+  box-shadow: 0 0 0 3px rgba(107, 170, 237, 0.1);
+}
+
+.rsvp-form .form-group input::placeholder {
+  color: var(--gray-200);
+}
+
+/* Attending Options */
+.attending-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attend-btn {
+  padding: 12px 16px;
+  border: 2px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.attend-btn:hover {
+  border-color: var(--primary-200);
+}
+
+.attend-yes.active {
+  border-color: #2ecc71;
+  background: rgba(46, 204, 113, 0.05);
+  color: #27ae60;
+}
+
+.attend-maybe.active {
+  border-color: var(--accent-gold);
+  background: rgba(240, 192, 64, 0.05);
+  color: #d4a006;
+}
+
+.attend-no.active {
+  border-color: var(--accent-red);
+  background: rgba(231, 76, 60, 0.05);
+  color: var(--accent-red);
+}
+
+.submit-rsvp-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
+
+.submit-rsvp-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Guest List */
+.guest-list {
+  flex: 1;
+  min-width: 320px;
+}
+
+.guest-list-title {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+}
+
+.guest-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.guests-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--gray-300);
+}
+
+.guests-empty span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.guest-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+  transition: all 0.2s;
+}
+
+.guest-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.guest-yes {
+  border-left: 3px solid #2ecc71;
+}
+
+.guest-maybe {
+  border-left: 3px solid var(--accent-gold);
+}
+
+.guest-no {
+  border-left: 3px solid var(--gray-200);
+}
+
+.guest-status {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.guest-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.guest-name {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-800);
+}
+
+.guest-note {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  margin-top: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .rsvp-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .rsvp-form {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .guest-list {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .rsvp-stats {
+    gap: 0.8rem;
+  }
+
+  .rsvp-stat {
+    min-width: 100px;
+    padding: 1rem 1.5rem;
+  }
+}

@@ -1,0 +1,115 @@
+.side-nav {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 10px 8px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(107, 170, 237, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-dot {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  overflow: visible;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.nav-label {
+  position: absolute;
+  right: 50px;
+  white-space: nowrap;
+  background: var(--gray-800);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(5px);
+  transition: all 0.2s ease;
+}
+
+.nav-dot:hover .nav-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-dot:hover {
+  background: var(--primary-50);
+}
+
+.nav-dot:hover .nav-icon {
+  transform: scale(1.15);
+}
+
+.nav-dot.active {
+  background: linear-gradient(135deg, var(--primary-200), var(--primary-300));
+  box-shadow: 0 2px 8px rgba(107, 170, 237, 0.3);
+}
+
+.nav-dot.active .nav-icon {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .side-nav {
+    right: 8px;
+    padding: 6px 5px;
+    gap: 3px;
+    border-radius: 14px;
+  }
+
+  .nav-dot {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .nav-icon {
+    font-size: 0.95rem;
+  }
+
+  .nav-label {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-nav {
+    right: 6px;
+    padding: 4px;
+    gap: 2px;
+  }
+
+  .nav-dot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-icon {
+    font-size: 0.85rem;
+  }
+}

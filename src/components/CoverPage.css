@@ -1,0 +1,446 @@
+.cover-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(235, 245, 255, 0.8) 0%, rgba(214, 235, 255, 0.7) 30%, rgba(255, 255, 255, 0.8) 70%, rgba(248, 250, 255, 0.9) 100%),
+              url('/images/thu-vien-hang-chuc-ty-sang-chanh-nhu-khach-san-5-sao-o-sai-gon-13.jpg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Particles */
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  bottom: -30px;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+/* ========== TEASER PHASE ========== */
+.teaser-container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.teaser-left {
+  flex-shrink: 0;
+}
+
+.teaser-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Speech bubble is now just a title card */
+.teaser-speech-bubble {
+  position: relative;
+  
+  padding: 1rem 1rem;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.teaser-content-box {
+
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teaser-chibi {
+  width: 250px;
+  height: auto;
+  mix-blend-mode: darken;
+  animation: chibiFloat 3s ease-in-out infinite;
+}
+
+@keyframes chibiFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.teaser-welcome-title {
+  font-size: 3rem;
+  color: var(--primary-500);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.teaser-date-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 1.2rem 2rem;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--primary-100);
+  margin-bottom: 2rem;
+}
+
+.teaser-date-day {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  line-height: 1;
+}
+
+.teaser-date-month {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-500);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.teaser-date-year {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  letter-spacing: 3px;
+}
+
+.teaser-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--gray-800);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.teaser-subtitle {
+  font-size: 1rem;
+  color: var(--gray-400);
+  margin-bottom: 2rem;
+}
+
+.teaser-hints {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.hint-item {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--primary-100);
+}
+
+.teaser-btn {
+  background: linear-gradient(135deg, var(--primary-300), var(--primary-500));
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 6px 25px rgba(59, 130, 196, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.teaser-btn:hover {
+  box-shadow: 0 8px 35px rgba(59, 130, 196, 0.45);
+}
+
+/* ========== REVEAL PHASE - Split Layout ========== */
+.reveal-split {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 950px;
+  padding: 2rem;
+}
+
+/* Left - Invitation Card */
+.reveal-card {
+  flex-shrink: 0;
+  width: 320px;
+}
+
+.reveal-card-inner {
+  background: linear-gradient(145deg, #FFFFFF 0%, #F0F7FF 50%, #E8F4FD 100%);
+  border: 2px solid rgba(107, 170, 237, 0.15);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 
+    0 20px 60px rgba(107, 170, 237, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.reveal-card-top-deco,
+.reveal-card-bottom-deco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.reveal-card-bottom-deco {
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+.deco-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-200), transparent);
+}
+
+.deco-star {
+  color: var(--primary-300);
+  font-size: 0.8rem;
+}
+
+.reveal-card-logo {
+  font-size: 3.5rem;
+  margin-bottom: 0.8rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+  animation: gentleBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.reveal-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--primary-500);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.8rem;
+}
+
+.reveal-card-divider {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-300), var(--accent-red));
+  border-radius: 2px;
+  margin: 0 auto 0.8rem;
+}
+
+.reveal-card-name {
+  font-size: 2rem;
+  color: var(--gray-800);
+  margin-bottom: 0.4rem;
+}
+
+.reveal-card-school {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.reveal-card-major {
+  font-size: 0.78rem;
+  color: var(--primary-400);
+  font-weight: 500;
+}
+
+/* Right - Info */
+.reveal-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.reveal-guest-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(231,76,60,0.08), rgba(231,76,60,0.04));
+  color: var(--accent-red);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(231,76,60,0.12);
+}
+
+.reveal-guest-tag strong {
+  font-family: var(--font-script);
+  font-size: 1.1rem;
+}
+
+.reveal-heading {
+  font-size: 2.2rem;
+  color: var(--primary-500);
+  margin-bottom: 1rem;
+}
+
+.reveal-message {
+  font-size: 1rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.reveal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.reveal-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+}
+
+.reveal-detail-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.reveal-detail-label {
+  font-size: 0.7rem;
+  color: var(--gray-300);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reveal-detail-value {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
+.reveal-hope {
+  font-size: 0.95rem;
+  color: var(--primary-400);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.scroll-hint {
+  font-size: 0.85rem;
+  color: var(--gray-300);
+  text-align: center;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.scroll-hint span {
+  background: rgba(255,255,255,0.7);
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-100);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Confetti */
+.confetti-burst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  animation: confettiBurst 1.2s ease-out forwards;
+}
+
+@keyframes confettiBurst {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)) rotate(var(--r)); opacity: 0; }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .reveal-split {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .reveal-card {
+    width: 280px;
+  }
+
+  .reveal-heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reveal-card {
+    width: 260px;
+  }
+
+  .reveal-card-inner {
+    padding: 2rem 1.5rem;
+  }
+
+  .reveal-card-name {
+    font-size: 1.6rem;
+  }
+
+  .reveal-heading {
+    font-size: 1.5rem;
+  }
+
+  .teaser-title {
+    font-size: 1.5rem;
+  }
+
+  .teaser-welcome-title {
+    font-size: 2rem;
+  }
+
+  .teaser-date-day {
+    font-size: 2.8rem;
+  }
+}
+

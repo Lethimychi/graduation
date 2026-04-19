@@ -1,0 +1,90 @@
+.app {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(107, 170, 237, 0.3);
+  color: var(--gray-800);
+}
+
+/* Smooth section transitions */
+.section + .section {
+  position: relative;
+}
+
+/* Loading shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--gray-50) 25%, var(--gray-100) 50%, var(--gray-50) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Decorative dots pattern */
+.dots-pattern {
+  position: absolute;
+  opacity: 0.03;
+  background-image: radial-gradient(circle, var(--primary-500) 1px, transparent 1px);
+  background-size: 24px 24px;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ========== Shared Chibi Styles ========== */
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.section-chibi-side {
+  width: 100px;
+  height: auto;
+  mix-blend-mode: darken;
+  animation: chibiHover 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.section-chibi {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+  mix-blend-mode: darken;
+  animation: chibiHover 3s ease-in-out infinite;
+}
+
+@keyframes chibiHover {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.section-chibi-wishes {
+  width: 110px;
+}
+
+.section-chibi-event {
+  width: 200px;
+}
+
+.section-chibi-rsvp {
+  width: 100px;
+}
+
+.footer-chibi {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.8rem;
+  mix-blend-mode: darken;
+  opacity: 0.85;
+}

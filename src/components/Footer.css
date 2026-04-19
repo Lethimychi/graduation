@@ -1,0 +1,98 @@
+.footer {
+  position: relative;
+  background: linear-gradient(180deg, #D6EBFF 0%, #3B82C4 60%, #1E4D7B 100%);
+  color: var(--white);
+  padding: 4rem 1.5rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer-wave {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  color: #D6EBFF;
+  line-height: 0;
+}
+
+.footer-wave svg {
+  width: 100%;
+  height: auto;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-main {
+  margin-bottom: 2rem;
+}
+
+.footer-graduation-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+}
+
+.footer-name {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.footer-school {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 0.2rem;
+}
+
+.footer-major {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 auto 1.5rem;
+  border-radius: 1px;
+}
+
+.footer-chibi {
+  width: 150px;
+  height: auto;
+  mix-blend-mode: multiply;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.footer-quote {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.footer-made {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+  .footer-name {
+    font-size: 1.6rem;
+  }
+
+  .footer-quote {
+    font-size: 1rem;
+  }
+}

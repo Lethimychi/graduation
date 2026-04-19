@@ -1,0 +1,251 @@
+.wishes-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F5 50%, #FFF0F0 100%);
+  padding: 1rem 1.5rem;
+}
+
+.wishes-container {
+  display: flex;
+  gap: 1rem;
+  max-width: 1000px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Form */
+.wish-form {
+  flex: 1;
+  min-width: 320px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--radius-xl);
+  position: sticky;
+  top: 2rem;
+}
+
+.wish-form-title {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--gray-100);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  background: var(--white);
+  transition: border-color 0.2s;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-300);
+  box-shadow: 0 0 0 3px rgba(107, 170, 237, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray-200);
+}
+
+.char-count {
+  display: block;
+  text-align: right;
+  font-size: 0.7rem;
+  color: var(--gray-300);
+  margin-top: 4px;
+}
+
+/* Emoji Picker */
+.emoji-picker {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.emoji-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--gray-100);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji-btn:hover {
+  border-color: var(--primary-200);
+  transform: scale(1.1);
+}
+
+.emoji-btn.active {
+  border-color: var(--accent-red);
+  background: rgba(231, 76, 60, 0.05);
+  transform: scale(1.1);
+}
+
+.submit-wish-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
+
+.submit-wish-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-message {
+  text-align: center;
+  padding: 12px;
+  background: rgba(46, 204, 113, 0.1);
+  border-radius: var(--radius-md);
+  color: #2ecc71;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Wishes Wall */
+.wishes-wall {
+  flex: 1;
+  min-width: 320px;
+}
+
+.wishes-wall-title {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  margin-bottom: 1rem;
+}
+
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.wishes-empty {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--gray-300);
+}
+
+.wishes-empty span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.wish-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+  transition: all 0.2s;
+}
+
+.wish-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.wish-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.wish-emoji {
+  font-size: 1.3rem;
+}
+
+.wish-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-800);
+  flex: 1;
+}
+
+.wish-time {
+  font-size: 0.7rem;
+  color: var(--gray-300);
+}
+
+.wish-message {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+  padding-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .wishes-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .wish-form {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .wishes-wall {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .wishes-list {
+    max-height: 400px;
+  }
+}
+
+/* Floating Emoji Confetti */
+.emoji-confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.floating-emoji {
+  position: absolute;
+  top: 0;
+  font-size: 3.5rem;
+  user-select: none;
+  will-change: transform, opacity;
+}
